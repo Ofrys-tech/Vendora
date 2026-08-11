@@ -18,7 +18,7 @@ or product-specific logic.
 During early development, install the package directly from GitHub:
 
 ```bash
-pnpm add "@vendora/core@git+ssh://git@github.com/Ofrys-tech/Vendora.git"
+pnpm add "@vendora/core@git+https://github.com/Ofrys-tech/Vendora.git#v0.1.0"
 ```
 
 The public API is exported from `src/index.ts` and compiled to `dist/` when installed from Git.
