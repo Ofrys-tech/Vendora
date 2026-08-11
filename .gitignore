@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+.playwright-mcp/
+.react-router/
+.vite/
+.wrangler/
+build/
+playwright-report/
+test-results/
