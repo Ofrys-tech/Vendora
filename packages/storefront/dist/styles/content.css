@@ -1,0 +1,53 @@
+.vendora-empty {
+  background: var(--vendora-surface);
+  border: 1px dashed var(--vendora-border);
+  border-radius: var(--vendora-radius);
+  padding: 3rem 1.25rem;
+  text-align: center;
+}
+
+.vendora-empty h2 {
+  margin-top: 0;
+}
+
+.vendora-empty p,
+.vendora-rich-text {
+  color: var(--vendora-muted);
+}
+
+.vendora-rich-text {
+  font-size: 1.05rem;
+  max-width: 48rem;
+}
+
+.vendora-rich-text h2,
+.vendora-rich-text h3,
+.vendora-rich-text h4,
+.vendora-rich-text strong {
+  color: var(--vendora-text);
+}
+
+.vendora-rich-text pre,
+.vendora-rich-text code,
+.vendora-delivery code {
+  background: color-mix(in srgb, var(--vendora-accent) 10%, var(--vendora-surface));
+  border-radius: calc(var(--vendora-radius) * 0.5);
+  color: var(--vendora-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.vendora-rich-text pre {
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.vendora-rich-text code,
+.vendora-delivery code {
+  padding: 0.15rem 0.35rem;
+}
+
+.vendora-rich-text blockquote {
+  border-left: 0.25rem solid var(--vendora-accent);
+  margin-left: 0;
+  padding-left: 1rem;
+}

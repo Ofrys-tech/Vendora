@@ -1,0 +1,40 @@
+@media (max-width: 48rem) {
+  .vendora-header__inner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-block: 1rem;
+  }
+
+  .vendora-navigation {
+    order: 3;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .vendora-header__actions {
+    flex-wrap: wrap;
+  }
+
+  .vendora-catalog-filters,
+  .vendora-cart-layout,
+  .vendora-product-page {
+    grid-template-columns: 1fr;
+  }
+
+  .vendora-cart-line {
+    align-items: start;
+    grid-template-columns: 1fr auto;
+  }
+
+  .vendora-cart-line > div {
+    grid-column: 1 / -1;
+  }
+
+  .vendora-cart-summary {
+    position: static;
+  }
+
+  .vendora-page {
+    padding-block: 2.5rem;
+  }
+}

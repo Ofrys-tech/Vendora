@@ -1,0 +1,59 @@
+:where(.vendora-root) {
+  background: var(--vendora-background);
+  color: var(--vendora-text);
+  font-family: var(--vendora-font-family);
+  line-height: 1.5;
+  min-height: 100%;
+}
+
+:where(.vendora-root) *,
+:where(.vendora-root) *::before,
+:where(.vendora-root) *::after {
+  box-sizing: border-box;
+}
+
+:where(.vendora-root) a {
+  color: inherit;
+}
+
+:where(.vendora-root) button,
+:where(.vendora-root) input,
+:where(.vendora-root) select {
+  font: inherit;
+}
+
+.vendora-button {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--vendora-radius);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 650;
+  gap: 0.4rem;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+}
+
+.vendora-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.vendora-button--primary {
+  background: var(--vendora-accent);
+  color: var(--vendora-accent-contrast);
+}
+
+.vendora-button--secondary {
+  background: var(--vendora-surface);
+  border-color: var(--vendora-accent);
+  color: var(--vendora-accent);
+}
+
+.vendora-button--ghost {
+  background: transparent;
+  border-color: var(--vendora-border);
+  color: var(--vendora-text);
+}

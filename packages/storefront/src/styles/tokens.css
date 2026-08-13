@@ -1,0 +1,13 @@
+:where(.vendora-root) {
+  --vendora-accent: #275d4c;
+  --vendora-accent-contrast: #ffffff;
+  --vendora-background: #f4f1e8;
+  --vendora-border: #d5d0c4;
+  --vendora-font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  --vendora-max-width: 76rem;
+  --vendora-muted: #68655e;
+  --vendora-radius: 0.6rem;
+  --vendora-surface: #ffffff;
+  --vendora-text: #1d2522;
+  color-scheme: light;
+}

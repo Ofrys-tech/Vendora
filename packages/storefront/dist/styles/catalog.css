@@ -1,0 +1,79 @@
+.vendora-catalog-filters {
+  align-items: end;
+  background: var(--vendora-surface);
+  border: 1px solid var(--vendora-border);
+  border-radius: var(--vendora-radius);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(12rem, 2fr) repeat(2, minmax(10rem, 1fr));
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.vendora-catalog-filters label,
+.vendora-checkout-form > label {
+  display: grid;
+  font-size: 0.85rem;
+  font-weight: 650;
+  gap: 0.35rem;
+}
+
+.vendora-catalog-filters input,
+.vendora-catalog-filters select,
+.vendora-checkout-form input {
+  background: var(--vendora-background);
+  border: 1px solid var(--vendora-border);
+  border-radius: calc(var(--vendora-radius) * 0.75);
+  color: var(--vendora-text);
+  min-height: 2.75rem;
+  padding: 0.6rem 0.75rem;
+}
+
+.vendora-product-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.vendora-product-card {
+  background: var(--vendora-surface);
+  border: 1px solid var(--vendora-border);
+  border-radius: var(--vendora-radius);
+  display: flex;
+  flex-direction: column;
+  min-height: 20rem;
+  overflow: hidden;
+}
+
+.vendora-product-card__media img,
+.vendora-gallery img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.vendora-product-card__body {
+  flex: 1;
+  padding: 1.25rem;
+}
+
+.vendora-product-card__body h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+.vendora-product-card__body p {
+  color: var(--vendora-muted);
+}
+
+.vendora-product-card__actions {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0 1.25rem 1.25rem;
+}
+
+.vendora-gallery {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}

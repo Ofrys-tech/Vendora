@@ -2,6 +2,8 @@ node_modules/
 dist/
 !packages/core/dist/
 !packages/core/dist/**
+!packages/storefront/dist/
+!packages/storefront/dist/**
 coverage/
 *.tsbuildinfo
 .DS_Store
