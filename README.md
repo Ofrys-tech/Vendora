@@ -1,37 +1,43 @@
-# Vendora Core
+# Vendora
 
-Vendora Core is a provider-independent foundation for reliable digital commerce.
+Vendora is a provider-independent platform for reliable digital commerce.
 
-The project is being developed in public from its domain model outward. It deliberately does not
-contain a storefront, payment-provider SDK, database, deployment platform, country-specific rules,
-or product-specific logic.
+The project is developed in public from its domain model outward. The workspace currently contains
+the stable core package and a minimal consumer used to verify package boundaries.
 
-## Current scope
+## Workspace
 
-- shared checkout lifecycle types;
-- payment confirmation rules;
-- checkout polling decisions;
-- zero runtime dependencies.
+- `packages/core`: zero-dependency commerce models and rules published as `@vendora/core`.
+- `apps/demo-store`: a neutral runnable consumer of the public core API.
+- `docs`: architecture and package-boundary documentation.
 
-## Installation
+## Core installation
 
-During early development, install the package directly from GitHub:
+Version `v0.1.0` remains available from the repository root for existing consumers:
 
 ```bash
 pnpm add "@vendora/core@git+https://github.com/Ofrys-tech/Vendora.git#v0.1.0"
 ```
 
-The public API is exported from `src/index.ts` and compiled to `dist/` when installed from Git.
+For commits after the workspace migration, pnpm can install the package from its subdirectory:
+
+```bash
+pnpm add "@vendora/core@git+https://github.com/Ofrys-tech/Vendora.git#main&path:/packages/core"
+```
+
+Pin a release tag or commit instead of `main` in production. The first workspace release will use
+`v0.2.0`; SySphere remains pinned to `v0.1.0` until the new package passes fresh-install checks.
 
 ## Development
 
 ```bash
 pnpm install
 pnpm check
+pnpm --filter @vendora/demo-store start
 ```
 
-Vendora Core is intentionally small. New modules are added only after their domain boundaries and
-behavior are defined by tests.
+New packages are added only when they need an independent installation and lifecycle. Domain areas
+inside core remain modules, not separate packages.
 
 ## License
 

@@ -1,35 +1,21 @@
 {
-  "name": "@vendora/core",
-  "version": "0.1.0",
-  "description": "Provider-independent domain core for reliable digital commerce",
-  "license": "MIT",
+  "name": "vendora-workspace",
+  "version": "0.0.0",
+  "description": "Public workspace for the Vendora digital commerce platform",
+  "private": true,
   "type": "module",
   "packageManager": "pnpm@11.21.0",
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "check": "pnpm run format:check && pnpm run typecheck && pnpm run test:run && pnpm run build",
+    "build": "pnpm -r --if-present run build",
+    "check": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "pnpm run build",
-    "test": "vitest",
-    "test:run": "vitest run",
-    "typecheck": "tsc -p tsconfig.json"
+    "lint": "pnpm -r --if-present run lint",
+    "test": "pnpm -r --if-present run test",
+    "typecheck": "pnpm -r --if-present run typecheck"
   },
   "devDependencies": {
-    "prettier": "^3.9.6",
-    "typescript": "^5.8.2",
-    "vitest": "^4.1.10"
+    "prettier": "^3.9.6"
   },
   "engines": {
     "node": ">=22"
