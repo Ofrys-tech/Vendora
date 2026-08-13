@@ -25,14 +25,13 @@
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json"
   },
-  "dependencies": {
-    "@vendora/core": "workspace:^"
-  },
   "peerDependencies": {
+    "@vendora/core": "^0.2.0",
     "react": "^19.0.0",
     "react-router": "^7.0.0 || ^8.0.0"
   },
   "devDependencies": {
+    "@vendora/core": "workspace:^",
     "@testing-library/react": "^16.3.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
