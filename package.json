@@ -12,6 +12,7 @@
     "format:check": "prettier --check .",
     "lint": "pnpm -r --if-present run lint",
     "test": "pnpm -r --if-present run test",
+    "test:e2e": "pnpm --filter @vendora/demo-store e2e",
     "typecheck": "pnpm -r --if-present run typecheck"
   },
   "devDependencies": {

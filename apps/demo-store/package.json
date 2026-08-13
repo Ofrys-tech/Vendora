@@ -4,18 +4,29 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.json && vite build",
+    "dev": "vite",
+    "e2e": "playwright test",
     "lint": "tsc -p tsconfig.json",
-    "start": "node dist/index.js",
+    "start": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@vendora/core": "workspace:*"
+    "@vendora/core": "workspace:*",
+    "@vendora/storefront": "workspace:*",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "8.0.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.55.0",
     "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "jsdom": "^30.0.0",
     "typescript": "^5.8.2",
+    "vite": "^8.0.0",
     "vitest": "^4.1.10"
   },
   "engines": {
