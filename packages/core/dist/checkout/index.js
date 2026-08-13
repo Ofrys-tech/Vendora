@@ -1,3 +1,10 @@
+const legacyConfirmedPaymentStatuses = new Set(['DELIVERY_FAILED', 'FULFILLED', 'PAID']);
+export function shouldContinueCheckoutPolling(status) {
+    if (!legacyConfirmedPaymentStatuses.has(status.paymentStatus)) {
+        return status.stage === 'awaiting_payment' || status.stage === 'asset_selection';
+    }
+    return status.pendingItemCount > 0 && status.orderStatus !== 'FULFILLING';
+}
 export const TERMINAL_CHECKOUT_STATUSES = ['fulfilled', 'failed', 'cancelled', 'expired'];
 const eventTargets = {
     checkout_started: 'awaiting_payment',

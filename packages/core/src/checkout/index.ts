@@ -3,6 +3,26 @@ import type { DeliveryItem, FulfillmentStatus } from '../fulfillment';
 import type { Money } from '../money';
 import type { PaymentStatus } from '../payment';
 
+export type CheckoutStage =
+  'asset_selection' | 'awaiting_payment' | 'paid' | 'expired' | 'cancelled' | 'manual_review';
+
+export type CheckoutProgress = Readonly<{
+  orderStatus: string;
+  paymentStatus: string;
+  pendingItemCount: number;
+  stage: CheckoutStage;
+}>;
+
+const legacyConfirmedPaymentStatuses = new Set(['DELIVERY_FAILED', 'FULFILLED', 'PAID']);
+
+export function shouldContinueCheckoutPolling(status: CheckoutProgress): boolean {
+  if (!legacyConfirmedPaymentStatuses.has(status.paymentStatus)) {
+    return status.stage === 'awaiting_payment' || status.stage === 'asset_selection';
+  }
+
+  return status.pendingItemCount > 0 && status.orderStatus !== 'FULFILLING';
+}
+
 export type CheckoutStatus =
   | 'draft'
   | 'awaiting_payment'

@@ -1,5 +1,7 @@
 import {
   CheckoutTransitionError,
+  isPaymentConfirmed,
+  shouldContinueCheckoutPolling,
   shouldPollCheckout,
   transitionCheckout,
   type CheckoutEvent,
@@ -60,5 +62,32 @@ describe('checkout transitions', () => {
     expect(shouldPollCheckout(checkout('fulfilling'))).toBe(true);
     expect(shouldPollCheckout(checkout('manual_review'))).toBe(false);
     expect(shouldPollCheckout(checkout('fulfilled'))).toBe(false);
+  });
+});
+
+describe('legacy checkout progress compatibility', () => {
+  const progress = {
+    orderStatus: 'AWAITING_PAYMENT',
+    paymentStatus: 'PENDING',
+    pendingItemCount: 0,
+    stage: 'awaiting_payment',
+  } as const;
+
+  it('accepts the status object used by v0.1 consumers', () => {
+    expect(isPaymentConfirmed({ paymentStatus: 'PAID' })).toBe(true);
+    expect(isPaymentConfirmed({ paymentStatus: 'DELIVERY_FAILED' })).toBe(true);
+  });
+
+  it('preserves the v0.1 polling rules', () => {
+    expect(shouldContinueCheckoutPolling(progress)).toBe(true);
+    expect(
+      shouldContinueCheckoutPolling({
+        ...progress,
+        orderStatus: 'FULFILLING',
+        paymentStatus: 'PAID',
+        pendingItemCount: 1,
+        stage: 'manual_review',
+      }),
+    ).toBe(false);
   });
 });

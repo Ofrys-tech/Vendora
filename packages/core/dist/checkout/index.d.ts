@@ -2,6 +2,14 @@ import type { Cart } from '../cart';
 import type { DeliveryItem, FulfillmentStatus } from '../fulfillment';
 import type { Money } from '../money';
 import type { PaymentStatus } from '../payment';
+export type CheckoutStage = 'asset_selection' | 'awaiting_payment' | 'paid' | 'expired' | 'cancelled' | 'manual_review';
+export type CheckoutProgress = Readonly<{
+    orderStatus: string;
+    paymentStatus: string;
+    pendingItemCount: number;
+    stage: CheckoutStage;
+}>;
+export declare function shouldContinueCheckoutPolling(status: CheckoutProgress): boolean;
 export type CheckoutStatus = 'draft' | 'awaiting_payment' | 'payment_confirmed' | 'fulfilling' | 'fulfilled' | 'manual_review' | 'failed' | 'cancelled' | 'expired';
 export type CheckoutState = Readonly<{
     deliveryItems: readonly DeliveryItem[];
