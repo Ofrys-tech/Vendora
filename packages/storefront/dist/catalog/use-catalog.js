@@ -1,6 +1,6 @@
 import { productsInCategory, searchProducts, sortProducts, } from '@vendora/core';
 import { useDeferredValue, useState } from 'react';
-import { useStorefront } from '../config/provider';
+import { useStorefront } from '../config/provider.js';
 export function useCatalog(options = {}) {
     const { catalog } = useStorefront();
     const [query, setQuery] = useState(options.query ?? '');

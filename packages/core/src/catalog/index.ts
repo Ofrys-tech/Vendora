@@ -1,4 +1,4 @@
-import type { Money } from '../money';
+import type { Money } from '../money.js';
 
 export type Product = Readonly<{
   categoryId: string;

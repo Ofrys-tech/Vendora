@@ -1,8 +1,8 @@
 import type { CheckoutState, DeliveryItem, StartCheckoutResult } from '@vendora/core';
 import { useState, type FormEvent, type ReactNode } from 'react';
-import { useCart, useStorefront } from '../config/provider';
-import { assertSafeUrl } from '../content/security';
-import { Button, ButtonLink, EmptyState, PageHero } from '../layout/primitives';
+import { useCart, useStorefront } from '../config/provider.js';
+import { assertSafeUrl } from '../content/security.js';
+import { Button, ButtonLink, EmptyState, PageHero } from '../layout/primitives.js';
 
 const checkoutStatusLabels: Record<CheckoutState['status'], string> = {
   awaiting_payment: 'Awaiting payment',

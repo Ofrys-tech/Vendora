@@ -1,8 +1,8 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { addCartItem, clearCart, removeCartItem, updateCartItem, } from '@vendora/core';
 import { createContext, useContext, useEffect, useState, } from 'react';
-import { validateStorefrontConfig } from './config';
-import { loadCart, loadFavorites, saveCart, saveFavorites } from './storage';
+import { validateStorefrontConfig } from './config.js';
+import { loadCart, loadFavorites, saveCart, saveFavorites } from './storage.js';
 const StorefrontContext = createContext(null);
 const themeTokenNames = {
     accent: '--vendora-accent',

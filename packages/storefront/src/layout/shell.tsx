@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link, NavLink } from 'react-router';
-import { useCart, useFavorites, useStorefront } from '../config/provider';
-import { assertSafeUrl } from '../content/security';
+import { useCart, useFavorites, useStorefront } from '../config/provider.js';
+import { assertSafeUrl } from '../content/security.js';
 
 export function StorefrontHeader() {
   const config = useStorefront();

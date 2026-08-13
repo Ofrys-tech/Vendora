@@ -1,6 +1,6 @@
 import type { Category, Product } from '@vendora/core';
 import type { ReactNode } from 'react';
-import type { CatalogController } from './use-catalog';
+import type { CatalogController } from './use-catalog.js';
 export type ProductMedia = Readonly<{
     alt: string;
     src: string;

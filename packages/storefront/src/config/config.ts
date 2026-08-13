@@ -1,6 +1,6 @@
 import { buildCategoryTree } from '@vendora/core';
-import { assertSafeUrl } from '../content/security';
-import type { NavigationItem, StorefrontConfig } from './types';
+import { assertSafeUrl } from '../content/security.js';
+import type { NavigationItem, StorefrontConfig } from './types.js';
 
 function assertUnique(values: readonly string[], label: string): void {
   if (new Set(values).size !== values.length) throw new TypeError(`${label} IDs must be unique.`);

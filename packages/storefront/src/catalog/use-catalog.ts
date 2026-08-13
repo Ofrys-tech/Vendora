@@ -6,7 +6,7 @@ import {
   type Product,
 } from '@vendora/core';
 import { useDeferredValue, useState } from 'react';
-import { useStorefront } from '../config/provider';
+import { useStorefront } from '../config/provider.js';
 
 export type CatalogController = Readonly<{
   categoryId: string | null;

@@ -1,7 +1,7 @@
-import type { Cart } from '../cart';
-import type { DeliveryItem, FulfillmentStatus } from '../fulfillment';
-import type { Money } from '../money';
-import type { PaymentStatus } from '../payment';
+import type { Cart } from '../cart/index.js';
+import type { DeliveryItem, FulfillmentStatus } from '../fulfillment/index.js';
+import type { Money } from '../money.js';
+import type { PaymentStatus } from '../payment/index.js';
 
 export type CheckoutStage =
   'asset_selection' | 'awaiting_payment' | 'paid' | 'expired' | 'cancelled' | 'manual_review';

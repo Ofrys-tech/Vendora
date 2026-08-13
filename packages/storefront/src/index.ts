@@ -3,47 +3,47 @@ export {
   CatalogPageTemplate,
   ProductCard,
   ProductGallery,
-} from './catalog/components';
+} from './catalog/components.js';
 export type {
   CatalogFiltersProps,
   CatalogPageTemplateProps,
   ProductCardProps,
   ProductMedia,
-} from './catalog/components';
-export { useCatalog } from './catalog/use-catalog';
-export type { CatalogController, CatalogOptions } from './catalog/use-catalog';
-export { CartDrawer, CartLines, CartPageTemplate, CartSummary } from './cart/components';
-export type { CartPageTemplateProps, CartSummaryProps } from './cart/components';
+} from './catalog/components.js';
+export { useCatalog } from './catalog/use-catalog.js';
+export type { CatalogController, CatalogOptions } from './catalog/use-catalog.js';
+export { CartDrawer, CartLines, CartPageTemplate, CartSummary } from './cart/components.js';
+export type { CartPageTemplateProps, CartSummaryProps } from './cart/components.js';
 export {
   CheckoutPageTemplate,
   CheckoutStatus,
   CheckoutStatusPageTemplate,
   DeliveryList,
-} from './checkout/components';
+} from './checkout/components.js';
 export type {
   CheckoutPageTemplateProps,
   CheckoutStatusPageTemplateProps,
-} from './checkout/components';
-export { useCheckoutStatus } from './checkout/use-checkout-status';
+} from './checkout/components.js';
+export { useCheckoutStatus } from './checkout/use-checkout-status.js';
 export type {
   CheckoutStatusController,
   CheckoutStatusOptions,
-} from './checkout/use-checkout-status';
-export { defineStorefrontConfig, validateStorefrontConfig } from './config/config';
-export { StorefrontProvider, useCart, useFavorites, useStorefront } from './config/provider';
+} from './checkout/use-checkout-status.js';
+export { defineStorefrontConfig, validateStorefrontConfig } from './config/config.js';
+export { StorefrontProvider, useCart, useFavorites, useStorefront } from './config/provider.js';
 export type {
   CartController,
   FavoritesController,
   StorefrontProviderProps,
-} from './config/provider';
+} from './config/provider.js';
 export {
   loadCart,
   loadFavorites,
   saveCart,
   saveFavorites,
   storefrontStorageKey,
-} from './config/storage';
-export type { StorefrontStorageKey } from './config/storage';
+} from './config/storage.js';
+export type { StorefrontStorageKey } from './config/storage.js';
 export type {
   FooterSection,
   NavigationItem,
@@ -55,23 +55,23 @@ export type {
   StorefrontRoutes,
   StorefrontThemeTokens,
   SupportLink,
-} from './config/types';
-export { ContentPageTemplate, ProductPageTemplate, SafeHtml } from './content/components';
+} from './config/types.js';
+export { ContentPageTemplate, ProductPageTemplate, SafeHtml } from './content/components.js';
 export type {
   ContentPageTemplateProps,
   ProductPageTemplateProps,
   SafeHtmlProps,
-} from './content/components';
-export { assertSafeUrl, isSafeUrl, sanitizeHtml } from './content/security';
-export { FavoritesPageTemplate } from './favorites/components';
-export type { FavoritesPageTemplateProps } from './favorites/components';
-export { useFavoriteProducts } from './favorites/use-favorite-products';
-export { Button, ButtonLink, EmptyState, PageHero } from './layout/primitives';
+} from './content/components.js';
+export { assertSafeUrl, isSafeUrl, sanitizeHtml } from './content/security.js';
+export { FavoritesPageTemplate } from './favorites/components.js';
+export type { FavoritesPageTemplateProps } from './favorites/components.js';
+export { useFavoriteProducts } from './favorites/use-favorite-products.js';
+export { Button, ButtonLink, EmptyState, PageHero } from './layout/primitives.js';
 export type {
   ButtonLinkProps,
   ButtonProps,
   EmptyStateProps,
   PageHeroProps,
-} from './layout/primitives';
-export { StorefrontFooter, StorefrontHeader, StorefrontShell } from './layout/shell';
-export type { StorefrontShellProps } from './layout/shell';
+} from './layout/primitives.js';
+export { StorefrontFooter, StorefrontHeader, StorefrontShell } from './layout/shell.js';
+export type { StorefrontShellProps } from './layout/shell.js';

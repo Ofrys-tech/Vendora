@@ -1,8 +1,8 @@
 import { jsxs as _jsxs, jsx as _jsx, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState } from 'react';
-import { useCart, useStorefront } from '../config/provider';
-import { assertSafeUrl } from '../content/security';
-import { Button, ButtonLink, EmptyState, PageHero } from '../layout/primitives';
+import { useCart, useStorefront } from '../config/provider.js';
+import { assertSafeUrl } from '../content/security.js';
+import { Button, ButtonLink, EmptyState, PageHero } from '../layout/primitives.js';
 const checkoutStatusLabels = {
     awaiting_payment: 'Awaiting payment',
     cancelled: 'Cancelled',

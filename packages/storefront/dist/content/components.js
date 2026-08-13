@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useCart, useFavorites, useStorefront } from '../config/provider';
-import { Button, PageHero } from '../layout/primitives';
-import { sanitizeHtml } from './security';
+import { useCart, useFavorites, useStorefront } from '../config/provider.js';
+import { Button, PageHero } from '../layout/primitives.js';
+import { sanitizeHtml } from './security.js';
 export function SafeHtml({ as: Element = 'div', className = '', html }) {
     return (_jsx(Element, { className: `vendora-rich-text ${className}`.trim(), dangerouslySetInnerHTML: { __html: sanitizeHtml(html) } }));
 }

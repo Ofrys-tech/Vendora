@@ -1,4 +1,4 @@
-import { addMoney, money, multiplyMoney } from '../money';
+import { addMoney, money, multiplyMoney } from '../money.js';
 export const emptyCart = () => ({ lines: [] });
 export function normalizeQuantity(quantity, maxQuantity = 9999) {
     if (!Number.isFinite(quantity))

@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { Link, NavLink } from 'react-router';
-import { useCart, useFavorites, useStorefront } from '../config/provider';
-import { assertSafeUrl } from '../content/security';
+import { useCart, useFavorites, useStorefront } from '../config/provider.js';
+import { assertSafeUrl } from '../content/security.js';
 export function StorefrontHeader() {
     const config = useStorefront();
     const { cart, openDrawer } = useCart();

@@ -1,6 +1,6 @@
 import { shouldPollCheckout, type CheckoutState } from '@vendora/core';
 import { useEffect, useState } from 'react';
-import { useStorefront } from '../config/provider';
+import { useStorefront } from '../config/provider.js';
 
 export type CheckoutStatusController = Readonly<{
   checkout: CheckoutState | null;

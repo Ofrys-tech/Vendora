@@ -1,6 +1,6 @@
 import { shouldPollCheckout } from '@vendora/core';
 import { useEffect, useState } from 'react';
-import { useStorefront } from '../config/provider';
+import { useStorefront } from '../config/provider.js';
 export function useCheckoutStatus(checkoutId, options = {}) {
     const { checkoutClient } = useStorefront();
     const [checkout, setCheckout] = useState(null);

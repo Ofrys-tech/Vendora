@@ -1,8 +1,8 @@
 import type { Product } from '@vendora/core';
 import type { ReactNode } from 'react';
-import { useCart, useFavorites, useStorefront } from '../config/provider';
-import { Button, PageHero } from '../layout/primitives';
-import { sanitizeHtml } from './security';
+import { useCart, useFavorites, useStorefront } from '../config/provider.js';
+import { Button, PageHero } from '../layout/primitives.js';
+import { sanitizeHtml } from './security.js';
 
 export type SafeHtmlProps = Readonly<{
   as?: 'article' | 'div' | 'section';

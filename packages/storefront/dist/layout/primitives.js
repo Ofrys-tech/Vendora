@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Link } from 'react-router';
-import { assertSafeUrl } from '../content/security';
+import { assertSafeUrl } from '../content/security.js';
 export function Button({ className = '', variant = 'primary', type = 'button', ...props }) {
     return (_jsx("button", { className: `vendora-button vendora-button--${variant} ${className}`.trim(), type: type, ...props }));
 }

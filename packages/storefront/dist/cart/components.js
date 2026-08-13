@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { cartTotal } from '@vendora/core';
-import { useCart, useStorefront } from '../config/provider';
-import { Button, ButtonLink, EmptyState, PageHero } from '../layout/primitives';
+import { useCart, useStorefront } from '../config/provider.js';
+import { Button, ButtonLink, EmptyState, PageHero } from '../layout/primitives.js';
 function useCartProducts() {
     const { catalog } = useStorefront();
     return new Map(catalog.products.map((product) => [product.id, product]));

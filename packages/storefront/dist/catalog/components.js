@@ -1,8 +1,8 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Link } from 'react-router';
-import { useCart, useFavorites, useStorefront } from '../config/provider';
-import { assertSafeUrl } from '../content/security';
-import { Button, EmptyState, PageHero } from '../layout/primitives';
+import { useCart, useFavorites, useStorefront } from '../config/provider.js';
+import { assertSafeUrl } from '../content/security.js';
+import { Button, EmptyState, PageHero } from '../layout/primitives.js';
 export function ProductGallery({ media }) {
     if (!media.length)
         return null;

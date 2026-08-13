@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Link, type LinkProps } from 'react-router';
-import { assertSafeUrl } from '../content/security';
+import { assertSafeUrl } from '../content/security.js';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   Readonly<{ variant?: 'primary' | 'secondary' | 'ghost' }>;

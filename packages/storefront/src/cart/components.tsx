@@ -1,7 +1,7 @@
 import { cartTotal, type Product } from '@vendora/core';
 import type { ReactNode } from 'react';
-import { useCart, useStorefront } from '../config/provider';
-import { Button, ButtonLink, EmptyState, PageHero } from '../layout/primitives';
+import { useCart, useStorefront } from '../config/provider.js';
+import { Button, ButtonLink, EmptyState, PageHero } from '../layout/primitives.js';
 
 function useCartProducts(): Map<string, Product> {
   const { catalog } = useStorefront();

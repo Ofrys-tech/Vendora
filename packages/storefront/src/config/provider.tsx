@@ -14,9 +14,9 @@ import {
   type CSSProperties,
   type ReactNode,
 } from 'react';
-import { validateStorefrontConfig } from './config';
-import { loadCart, loadFavorites, saveCart, saveFavorites } from './storage';
-import type { StorefrontConfig, StorefrontThemeTokens } from './types';
+import { validateStorefrontConfig } from './config.js';
+import { loadCart, loadFavorites, saveCart, saveFavorites } from './storage.js';
+import type { StorefrontConfig, StorefrontThemeTokens } from './types.js';
 
 export type CartController = Readonly<{
   add: (product: Product, quantity?: number) => void;

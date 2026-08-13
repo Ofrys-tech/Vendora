@@ -1,10 +1,10 @@
 import type { CatalogSort, Category, Product } from '@vendora/core';
 import type { ReactNode } from 'react';
 import { Link } from 'react-router';
-import { useCart, useFavorites, useStorefront } from '../config/provider';
-import { assertSafeUrl } from '../content/security';
-import { Button, EmptyState, PageHero } from '../layout/primitives';
-import type { CatalogController } from './use-catalog';
+import { useCart, useFavorites, useStorefront } from '../config/provider.js';
+import { assertSafeUrl } from '../content/security.js';
+import { Button, EmptyState, PageHero } from '../layout/primitives.js';
+import type { CatalogController } from './use-catalog.js';
 
 export type ProductMedia = Readonly<{
   alt: string;

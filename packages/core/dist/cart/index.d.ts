@@ -1,5 +1,5 @@
-import type { Product } from '../catalog';
-import { type Money } from '../money';
+import type { Product } from '../catalog/index.js';
+import { type Money } from '../money.js';
 export type CartLine = Readonly<{
     productId: string;
     productSlug: string;

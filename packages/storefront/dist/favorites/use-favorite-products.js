@@ -1,4 +1,4 @@
-import { useStorefront, useFavorites } from '../config/provider';
+import { useStorefront, useFavorites } from '../config/provider.js';
 export function useFavoriteProducts() {
     const { catalog } = useStorefront();
     const { favoriteIds } = useFavorites();

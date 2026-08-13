@@ -1,9 +1,9 @@
 import type { Product } from '@vendora/core';
 import type { ReactNode } from 'react';
-import { ProductCard } from '../catalog/components';
-import { useStorefront } from '../config/provider';
-import { ButtonLink, EmptyState, PageHero } from '../layout/primitives';
-import { useFavoriteProducts } from './use-favorite-products';
+import { ProductCard } from '../catalog/components.js';
+import { useStorefront } from '../config/provider.js';
+import { ButtonLink, EmptyState, PageHero } from '../layout/primitives.js';
+import { useFavoriteProducts } from './use-favorite-products.js';
 
 export type FavoritesPageTemplateProps = Readonly<{
   description?: ReactNode;

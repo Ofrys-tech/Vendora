@@ -1,6 +1,6 @@
 import { type Cart, type Product } from '@vendora/core';
 import { type ReactNode } from 'react';
-import type { StorefrontConfig } from './types';
+import type { StorefrontConfig } from './types.js';
 export type CartController = Readonly<{
     add: (product: Product, quantity?: number) => void;
     cart: Cart;
