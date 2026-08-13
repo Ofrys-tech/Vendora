@@ -1,17 +1,18 @@
-import { shouldContinueCheckoutPolling, type CheckoutProgress } from '@vendora/core';
+import { shouldPollCheckout, type CheckoutState } from '@vendora/core';
 
-export const demoCheckout: CheckoutProgress = {
-  orderStatus: 'AWAITING_PAYMENT',
-  paymentStatus: 'PENDING',
-  pendingItemCount: 0,
-  stage: 'awaiting_payment',
+export const demoCheckout: CheckoutState = {
+  deliveryItems: [],
+  fulfillmentStatus: 'pending',
+  id: 'demo-checkout',
+  paymentStatus: 'pending',
+  status: 'awaiting_payment',
 };
 
 export function describeDemoStore() {
   return {
     name: 'Vendora Demo Store',
-    polling: shouldContinueCheckoutPolling(demoCheckout),
-    status: demoCheckout.stage,
+    polling: shouldPollCheckout(demoCheckout),
+    status: demoCheckout.status,
   };
 }
 
